@@ -1,0 +1,26 @@
+
+body {
+	background: rgb(20,20,20);
+	background-position: 50% 100px;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+/* lazy man's quick box */
+
+.container {
+	width: 500px;
+	margin: 0 auto;
+	background: rgba(240,240,240,.96);
+	padding:15px 15px 15px 15px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 1px rgb(20,20,20);
+}
+/* Strike through when items get checked */
+
+.done-true {
+	text-decoration: line-through;
+}

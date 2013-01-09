@@ -1,0 +1,25 @@
+//setting up model for search query
+input(type="text", ng-model="search", placeholder="Search")
+table
+	thead
+	tr
+		th Done
+		th Name
+		th Description
+	tbody
+	//using iteration to loop through data and filtering for the search bar
+	tr(ng-repeat="item in todoList | filter:search")
+		//checkbox to set item.done 'true' or 'false'
+		td
+			input(type="checkbox", ng-model="item.done")
+		//name	
+		td(class="done-{{item.done}}") {{item.name}}
+		//description
+		td(class="done-{{item.done}}") {{item.desc}}
+//on form submittal call addTodo() in my controller
+form(ng-submit="addTodo()")
+	input(type="text", ng-model="name", placeholder="Add todo name")
+	input(type="text", ng-model="desc", placeholder="Add description")
+	input(type="submit", value="add")
+//Call delTodo() to remove checked items
+a(href='#', ng-click='delTodo()') Remove Completed Tasks?
